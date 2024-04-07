@@ -1,7 +1,7 @@
 name: fl_pip
 description: A picture-in-picture plugin for android and ios that can display any flutter view
-version: 2.0.0
-repository: https://github.com/Wayaer/fl_pip.git
+version: 2.0.1
+repository: https://github.com/jun7572/fl_pip.git
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
