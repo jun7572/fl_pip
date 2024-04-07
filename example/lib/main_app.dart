@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:fl_pip/fl_pip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_waya/flutter_waya.dart';
@@ -10,6 +12,7 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
+  int i=0;
   @override
   Widget build(BuildContext context) => Scaffold(
           body: SingleChildScrollView(
@@ -71,13 +74,21 @@ class _MainAppState extends State<MainApp> {
         ElevatedButton(
             onPressed: () async {
               await FlPiP().enable(
+
                   ios: const FlPiPiOSConfig(
+
                       path: 'assets/landscape.mp4', packageName: null),
                   android: const FlPiPAndroidConfig(
                       aspectRatio: Rational.maxLandscape()));
-              Future.delayed(const Duration(seconds: 10), () {
-                FlPiP().disable();
+              // Future.delayed(const Duration(seconds: 10), () {
+              //   FlPiP().disable();
+              // });
+              Timer t= Timer.periodic(Duration(seconds: 1), (timer) {
+                FlPiP().updateData({"data":"111","numPercent":"11","numStr":"111","color":false});
+                print("flutter==>$i");
               });
+
+
             },
             child: const Text('Enable PiP')),
         ElevatedButton(

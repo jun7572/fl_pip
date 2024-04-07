@@ -125,6 +125,18 @@ class FlPiP {
     final state = await _channel.invokeMethod<bool>('disable');
     return state ?? false;
   }
+  Future playerStart() async {
+    return _channel.invokeMethod('playerStart');
+
+  }
+  Future stopPip() async {
+    return _channel.invokeMethod('stopPip');
+
+  }
+
+  Future<void> updateData(var data) async {
+    return _channel.invokeMethod('updateData',data);
+  }
 
   /// 画中画状态
   /// Picture-in-picture window state

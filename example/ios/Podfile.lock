@@ -1,11 +1,17 @@
 PODS:
   - fl_pip (0.0.1):
     - Flutter
+    - SnapKit
   - Flutter (1.0.0)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - fl_pip (from `.symlinks/plugins/fl_pip/ios`)
   - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   fl_pip:
@@ -14,9 +20,10 @@ EXTERNAL SOURCES:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  fl_pip: a193f28e7c4ffcabcb0df25fb40f8e31ec929efc
+  fl_pip: a5bbf0e317c94ad90c32aa6271c2b9318d5c6ebd
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
 PODFILE CHECKSUM: cc1f88378b4bfcf93a6ce00d2c587857c6008d3b
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.12.1
